@@ -1,4 +1,9 @@
+# This is our deployment file, its where we will define many things,
+# volumes, env variables, networks and much more.
+# It will grow as our projects become more complex.
+
 services:
   django:
+    # Builds locally from the docker file, this is the best way until we can host our own containers and build them automatically with CI.
     build: .
     restart: unless-stopped
